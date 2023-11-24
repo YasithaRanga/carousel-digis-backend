@@ -1,0 +1,31 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description": "Backend application of carousel developed using nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YasithaRanga/carousel-digis-backend.git"
+  },
+  "keywords": [
+    "carousel",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Yasitha Ranga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YasithaRanga/carousel-digis-backend/issues"
+  },
+  "homepage": "https://github.com/YasithaRanga/carousel-digis-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "nodemon": "^3.0.1"
+  }
+}
