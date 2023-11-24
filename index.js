@@ -6,6 +6,7 @@ const carouselRoutes = require('./carousel/routes');
 const { connectDb } = require('./db');
 
 const app = express();
+app.use(express.json());
 app.use(cors());
 app.use('/api', [carouselRoutes]);
 
