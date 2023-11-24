@@ -3,9 +3,15 @@ const carouselData = require('./sampledata');
 const { getRecords, createRecord } = require('./service');
 
 const getSlides = async (req, res) => {
-  let slideCount = 10;
+  const limit = 10;
 
-  if (req.query.slides && parseInt(req.query.slides) <= 10) {
+  let slideCount = limit;
+
+  if (
+    req.query.slides &&
+    parseInt(req.query.slides) < limit &&
+    parseInt(req.query.slides) > 0
+  ) {
     slideCount = parseInt(req.query.slides);
   }
 
