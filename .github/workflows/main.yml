@@ -28,7 +28,7 @@ jobs:
             --stack-name sam-app \
             --capabilities CAPABILITY_IAM \
             --no-confirm-changeset \
-            --parameter-overrides "ParameterKey=MONGODB_USERNAME,ParameterValue=yasitharanga1" "ParameterKey=MONGODB_PASSWORD,ParameterValue=YRKTV642yrktv"
+            --parameter-overrides ParameterKey=MONGODB_USERNAME,ParameterValue=yasitharanga1 ParameterKey=MONGODB_PASSWORD,ParameterValue=YRKTV642yrktv
 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
