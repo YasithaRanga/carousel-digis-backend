@@ -6,9 +6,6 @@ Parameters:
   MONGODB_PASSWORD:
     Type: String
     Description: Password for MongoDB
-  MONGODB_USERNAME:
-    Type: String
-    Description: Username for MongoDB
 
 Resources:
   Carousel:
@@ -23,7 +20,7 @@ Resources:
       Environment:
         Variables:
           PORT: 8000
-          MONGODB_USERNAME: !Ref MONGODB_USERNAME
+          MONGODB_USERNAME: yasitharanga1
           MONGODB_PASSWORD: !Ref MONGODB_PASSWORD
 
 Outputs:
