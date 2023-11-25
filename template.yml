@@ -15,8 +15,8 @@ Resources:
       Environment:
         Variables:
           PORT: 8000
-          MONGODB_USERNAME: ${secrets.MONGODB_USERNAME}
-          MONGODB_PASSWORD: ${secrets.MONGODB_PASSWORD}
+          MONGODB_USERNAME: !Ref MONGODB_USERNAME
+          MONGODB_PASSWORD: !Ref MONGODB_PASSWORD
 
 Outputs:
   CarouselApi:
