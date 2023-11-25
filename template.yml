@@ -15,8 +15,8 @@ Resources:
       Environment:
         Variables:
           PORT: 8000
-          # MONGODB_USERNAME: !Sub '{{resolve:ssm:/carousel/mongodb-username:1}}'
-          # MONGODB_PASSWORD: !Sub '{{resolve:ssm:/carousel/mongodb-password:1}}'
+          MONGODB_USERNAME: !Sub '{{resolve:ssm:/carousel/mongodb-username:1}}'
+          MONGODB_PASSWORD: !Sub '{{resolve:ssm:/carousel/mongodb-password:1}}'
 
 Outputs:
   CarouselApi:
