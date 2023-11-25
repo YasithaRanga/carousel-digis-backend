@@ -25,4 +25,4 @@ jobs:
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          sam deploy --stack-name sam-app --region ap-south-1 --no-confirm-changeset --parameter-overrides "ParameterKey=MONGODB_PASSWORD,ParameterValue=${{ secrets.MONGODB_PASSWORD }}"
+          sam deploy --stack-name sam-app --region ap-south-1 --no-confirm-changeset
