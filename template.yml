@@ -15,8 +15,8 @@ Resources:
       Environment:
         Variables:
           PORT: 8000
-          MONGODB_USERNAME: yasitharanga1
-          MONGODB_PASSWORD: YRKTV642yrktv
+          MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}
+          MONGODB_PASSWORD: ${{ env.MONGODB_PASSWORD }}
 
 Outputs:
   CarouselApi:
