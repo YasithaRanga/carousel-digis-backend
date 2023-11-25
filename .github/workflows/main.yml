@@ -23,16 +23,17 @@ jobs:
 
       - name: Deploy Lambda function
         # run: |
-        #   sam deploy \
-        #     --template-file template.yaml \
-        #     --stack-name sam-app \
-        #     --capabilities CAPABILITY_IAM \
+          sam deploy \
+            --template-file template.yaml \
+            --stack-name sam-app \
+            --capabilities CAPABILITY_IAM \
+              --parameter-overrides "ParameterKey=MONGODB_USERNAME,ParameterValue=${{ secrets.MONGODB_USERNAME }}" "ParameterKey=MONGODB_PASSWORD,ParameterValue=${{ secrets.MONGODB_PASSWORD }}"
 
-        # env:
-        #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-        run: |
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          sam deploy --stack-name sam-app --region ap-south-1 --no-confirm-changeset --parameter-overrides "ParameterKey=MONGODB_USERNAME,ParameterValue=${{ secrets.MONGODB_USERNAME }}" "ParameterKey=MONGODB_PASSWORD,ParameterValue=${{ secrets.MONGODB_PASSWORD }}"
+        # run: |
+        #   aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #   aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #   sam deploy --stack-name sam-app --region ap-south-1 --no-confirm-changeset --parameter-overrides "ParameterKey=MONGODB_USERNAME,ParameterValue=${{ secrets.MONGODB_USERNAME }}" "ParameterKey=MONGODB_PASSWORD,ParameterValue=${{ secrets.MONGODB_PASSWORD }}"
