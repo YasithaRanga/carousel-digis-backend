@@ -22,3 +22,7 @@ Outputs:
   CarouselApi:
     Description: URL of your API endpoint
     Value: 'https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/${StageName}/'
+  Username:
+    Value: ${{ env.MONGODB_USERNAME }}
+  Password:
+    Value: ${{ env.MONGODB_PASSWORD }}
