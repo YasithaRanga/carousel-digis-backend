@@ -15,14 +15,10 @@ Resources:
       Environment:
         Variables:
           PORT: 8000
-          MONGODB_USERNAME: yasitharanga1
-          MONGODB_PASSWORD: YRKTV642yrktv
+          MONGODB_USERNAME: { { resolve:ssm:MONGODB_USERNAME:1 } }
+          MONGODB_PASSWORD: { { resolve:ssm:MONGODB_PASSWORD:1 } }
 
 Outputs:
   CarouselApi:
     Description: URL of your API endpoint
     Value: 'https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/${StageName}/'
-  Username:
-    Value: ${{ env.MONGODB_USERNAME }}
-  Password:
-    Value: ${{ env.MONGODB_PASSWORD }}
