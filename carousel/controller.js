@@ -45,7 +45,7 @@ const createSlide = async (req, res) => {
         response: response,
         status: 'success',
       },
-      204
+      201
     );
   } else {
     await res.json(
