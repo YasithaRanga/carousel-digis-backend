@@ -22,10 +22,9 @@ jobs:
         run: npm install
 
       - name: Set up MongoDB credentials
-      run: |
-        echo "MONGODB_USERNAME=${{ secrets.MONGODB_USERNAME }}" >> $GITHUB_ENV
-        echo "MONGODB_PASSWORD=${{ secrets.MONGODB_PASSWORD }}" >> $GITHUB_ENV
-
+        run: |
+          echo "MONGODB_USERNAME=${{ secrets.MONGODB_USERNAME }}" >> $GITHUB_ENV
+          echo "MONGODB_PASSWORD=${{ secrets.MONGODB_PASSWORD }}" >> $GITHUB_ENV
 
       - name: Deploy Lambda function
         run: |
