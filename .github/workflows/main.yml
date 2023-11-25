@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Deploy Lambda function
-        # run: |
+        run: |
           sam deploy \
             --template-file template.yaml \
             --stack-name sam-app \
