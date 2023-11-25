@@ -24,7 +24,7 @@ jobs:
       - name: Deploy Lambda function
         run: |
           sam deploy \
-            --template-file template.yaml \
+            --template-file template.yml \
             --stack-name sam-app \
             --capabilities CAPABILITY_IAM \
               --parameter-overrides "ParameterKey=MONGODB_USERNAME,ParameterValue=${{ secrets.MONGODB_USERNAME }}" "ParameterKey=MONGODB_PASSWORD,ParameterValue=${{ secrets.MONGODB_PASSWORD }}"
