@@ -2,6 +2,14 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Carousel Lambda Function.
 
+Parameters:
+  MONGODB_PASSWORD:
+    Type: String
+    Description: Password for MongoDB
+  MONGODB_USERNAME:
+    Type: String
+    Description: Username for MongoDB
+
 Resources:
   Carousel:
     Type: 'AWS::Serverless::Function'
