@@ -1,7 +1,10 @@
 name: Deploy Lambda Function
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    branches:
+      - staging
+
   push:
     branches:
       - staging
